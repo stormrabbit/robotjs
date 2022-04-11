@@ -1,7 +1,6 @@
 var robot = require("robotjs");
-
-// Type "Hello World".
-
+const ONE_TURN = 13425
+const TWO_TURN = 26491
 const keys = [ 0,1,2,3,4,5, 11 ]
 const delay = (time = 1000) => new Promise((res) => {
     setTimeout(() => {
@@ -27,7 +26,7 @@ let turn = 1;
 
     await(1000)
     console.log(new Date().getTime() - current)
-    console.log(`已获得${turn}轮经验`)
+    console.log(`已获得${turn * TWO_TURN}点经验`)
     turn ++;
 })()
 const timer = setInterval(async ()=> {
@@ -48,6 +47,6 @@ const timer = setInterval(async ()=> {
 
     await(1000)
     console.log(new Date().getTime() - current)
-    console.log(`已获得${turn * 13425}轮经验`)
+    console.log(`已获得${turn * TWO_TURN }点经验`)
     turn ++;
 }, 24500)
