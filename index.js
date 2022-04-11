@@ -48,6 +48,6 @@ const timer = setInterval(async ()=> {
 
     await(1000)
     console.log(new Date().getTime() - current)
-    console.log(`已获得${turn}轮经验`)
+    console.log(`已获得${turn * 13425}轮经验`)
     turn ++;
 }, 24500)
