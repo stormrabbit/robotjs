@@ -1,21 +1,21 @@
-var robot = require("robotjs");
+const robot = require("robotjs");
 const ONE_TURN = 13425
 const TWO_TURN = 26491
-const keys = [ 0,1,2,3,4,5, 11 ]
+const keys = [0, 1, 2, 3, 4, 5, 11]
 const delay = (time = 1000) => new Promise((res) => {
     setTimeout(() => {
         res()
     }, time)
 })
 let turn = 1;
-(async ()=> {
+(async () => {
     let index;
     const current = new Date().getTime()
     robot.setMouseDelay(100)
-    for(index = 0;index < keys.length; index ++) {
+    for (index = 0; index < keys.length; index++) {
         await delay(3000)
         console.log('下一个，好')
-        if(index === 0 || (index === (keys.length - 1))) {
+        if (index === 0 || (index === (keys.length - 1))) {
             robot.mouseToggle('down', 'left')
             robot.mouseToggle('up', 'left')
         } else {
@@ -24,19 +24,19 @@ let turn = 1;
         }
     }
 
-    await(1000)
+    await (1000)
     console.log(new Date().getTime() - current)
     console.log(`已获得${turn * TWO_TURN}点经验`)
-    turn ++;
+    turn++;
 })()
-const timer = setInterval(async ()=> {
+setInterval(async () => {
     let index;
     const current = new Date().getTime()
     robot.setMouseDelay(100)
-    for(index = 0;index < keys.length; index ++) {
+    for (index = 0; index < keys.length; index++) {
         await delay(3000)
         console.log('下一个，好')
-        if(index === 0 || (index === (keys.length - 1))) {
+        if (index === 0 || (index === (keys.length - 1))) {
             robot.mouseToggle('down', 'left')
             robot.mouseToggle('up', 'left')
         } else {
@@ -45,8 +45,8 @@ const timer = setInterval(async ()=> {
         }
     }
 
-    await(1000)
+    await (1000)
     console.log(new Date().getTime() - current)
-    console.log(`已获得${turn * TWO_TURN }点经验`)
-    turn ++;
+    console.log(`已获得${turn * TWO_TURNgit}点经验`)
+    turn++;
 }, 24500)
