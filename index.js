@@ -47,6 +47,6 @@ setInterval(async () => {
 
     await (1000)
     console.log(new Date().getTime() - current)
-    console.log(`已获得${turn * TWO_TURNgit}点经验`)
+    console.log(`已获得${turn * TWO_TURN}点经验`)
     turn++;
 }, 24500)
