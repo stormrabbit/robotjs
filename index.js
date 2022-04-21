@@ -1,7 +1,7 @@
 const robot = require("robotjs");
 const ONE_TURN = 13425
 const TWO_TURN = 26491
-const keys = [0, 1, 2, 3, 4, 5, 11]
+const keys = [0, 1, 2, 3, 4, 5, 6]
 const delay = (time = 1000) => new Promise((res) => {
     setTimeout(() => {
         res()
